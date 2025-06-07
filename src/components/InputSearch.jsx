@@ -1,6 +1,6 @@
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
-import { FetchWeather } from "./FetchWeather";
+import { FetchWeather } from "./utils/FetchWeather";
 
 const API_KEY = "04d9717542bdbe12532691fb8af1aad8";
 
