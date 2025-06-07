@@ -1,11 +1,10 @@
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
 import { FetchWeather } from "./FetchWeather";
-import { RenderWeather } from "./RenderWeather";
 
 const API_KEY = "04d9717542bdbe12532691fb8af1aad8";
 
-export function InputSearchButton({ onWeatherFetched }) {
+export function InputSearchButton({ onWeatherFetched, onForecastFetched }) {
   const [inputValue, setInputValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -18,10 +17,13 @@ export function InputSearchButton({ onWeatherFetched }) {
     setError("");
     try {
       const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=${API_KEY}&q=${inputValue}`;
+      const foreCastUrl = `https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=${API_KEY}&q=${inputValue}`;
       const data = await FetchWeather(url);
+      const dataForeCast = await FetchWeather(foreCastUrl);
 
       if (data.cod === 200) {
         onWeatherFetched(data);
+        onForecastFetched(dataForeCast.list);
         setError("");
       } else {
         setError("gagal mengambil data"); //temporary debug
