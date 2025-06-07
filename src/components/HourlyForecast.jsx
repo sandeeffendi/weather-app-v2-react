@@ -1,6 +1,5 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./HourlyForecast.css";
-import react from "react";
 import { useRef } from "react";
 
 export function HourlyForecast() {
