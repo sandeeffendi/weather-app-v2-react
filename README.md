@@ -1,70 +1,132 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather App v2 Built With React
 
-## Available Scripts
+Welcome to **Weather App v2**, the second version of my weather application, now rebuilt using **React** and **Tailwind CSS** for a modern, scalable, and responsive user experience. This new version improves upon the previous one that was built with vanilla JavaScript, HTML, and CSS.
 
-In the project directory, you can run:
+> 🔗 **Live Demo:** (https://weather-app-v2-react.vercel.app/)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Weather App v2 provides current weather details plus a **3-hour interval hourly forecast** for the day, offering a more comprehensive weather insight.
 
-### `npm test`
+Features include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Current weather conditions by city  
+- Hourly forecast every 3 hours for the entire day  
+- Responsive design using Tailwind CSS  
+- Unit testing with Bun  
 
-### `npm run build`
+All weather data is still powered by the familiar [OpenWeatherMap API](https://openweathermap.org/api), the same API used in the previous version.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## New Features Compared to v1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Feature                  | v1 (Vanilla JS)                 | v2 (React + Tailwind)               |
+|--------------------------|--------------------------------|-----------------------------------|
+| Framework                | None (Vanilla JS)              | React                            |
+| Styling                  | CSS vanilla                   | Tailwind CSS                    |
+| Hourly Forecast          | No                           | Yes (per 3 hours, full day)     |
+| Testing                  | Unit tests with Bun           | Unit tests with Bun              |
+| Component-based UI       | No                           | Yes                             |
+| Performance & Scalability| Basic                        | Improved with React's virtual DOM|
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React.js** – UI framework for building components  
+- **Tailwind CSS** – Utility-first CSS framework for styling  
+- **Bun** – JavaScript runtime and test runner for fast testing  
+- **OpenWeatherMap API** – Weather data source  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation & Setup
 
-## Learn More
+1. Clone the repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/sandeeffendi/weather-app-v2-react.git
+cd weather-app-v2-react
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Install dependencies
 
-### Code Splitting
+```bash
+bun install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Start the development server
 
-### Analyzing the Bundle Size
+```bash
+bun dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Open your browser at `http://localhost:3000`
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Running Tests
 
-### Advanced Configuration
+Run unit tests with Bun:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+bun test
+```
 
-### Deployment
+Tests cover:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* API fetching & error handling
+* Correct rendering of current weather
+* Displaying hourly forecast data
+* Component unit tests
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## API Reference
+
+* [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
+* [OpenWeatherMap 3-hour Forecast API](https://openweathermap.org/forecast5)
+
+---
+
+## How to Use
+
+1. Enter a city name in the search bar
+2. View the current weather information
+3. Scroll to see the hourly forecast broken down every 3 hours for the current day
+
+---
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. Suggestions and bug reports are welcome!
+
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to your branch (`git push origin feature/your-feature`)
+5. Open a pull request
+
+---
+
+## Acknowledgements
+
+Thanks to OpenWeatherMap for providing the free weather API, and to all the open-source communities behind React, Tailwind CSS, and Bun.
+
+---
+
+## Previous Version Info
+
+For reference, here is a brief overview of the previous version of this app:
+
+**Realtime Weather App** - built with vanilla JS, HTML, and CSS. It featured basic current weather data fetching and display, with no hourly forecast.
+
+[View the previous github repository](https://github.com/sandeeffendi/weather-app-js)
+
+[View the previous version live demo](https://weather-app-js-seven.vercel.app/)
+
+---
